@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f0e1e7f5fd.js" crossorigin="anonymous"></script>
+</head>
+<body class="jumbotron justify-content-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1>BUDGET APP</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row pr-4">
+            <div class="col-lg-5 col-12 border border-success rounded m-3 p-5">
+                <h3>Please Enter Your Budget</h3>
+                <form action="">
+                    <div class="input-group mb-3 mt-3">
+                        <div class="input-group-prepend">
+                        <span class="input-group-text">$</span>
+                        </div>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    </div>
+                    <button type="submit" class="btn btn-outline-success">Calculate</button>
+                </form>
+            </div>
+            <div class="col-lg-6 col-12 p-2">
+                <div class="container">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-sm-4 col-12">
+                            <h3>BUDGET</h3>
+                            <i class="far fa-money-bill-alt fa-5x" style="color:rgb(9, 114, 114);"></i><br>
+                            <p class="mt-4"> <i class="fas fa-dollar-sign fa-3x"></i> <span  style="font-size: xx-large;">0</span></p>
+                        </div>
+                        <div class="col-sm-4 col-12">
+                            <h3>EXPENSES</h3>
+                            <i class="fas fa-credit-card fa-5x" style="color:rgb(9, 114, 114);"></i><br>
+                            <p class="mt-4"> <i class="fas fa-dollar-sign fa-3x"></i> <span  style="font-size: xx-large;">0</span></p>
+                        </div>
+                        <div class="col-sm-4 col-12">
+                            <h3>BALANCE</h3>
+                            <i class="fas fa-dollar-sign fa-5x" style="color:rgb(9, 114, 114);"></i><br>
+                            <p class="mt-4"> <i class="fas fa-dollar-sign fa-3x"></i> <span  style="font-size: xx-large;">0</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row pr-4">
+            <div class="col-lg-5 col-12 border border-danger rounded m-3 p-5">
+                <form action="">
+                    <h3>Please Enter Your Expense</h3>
+                    <div class="input-group mb-3 mt-3">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    </div>
+                    <h3>Please Enter Expense Amount</h3>
+                    <div class="input-group mb-3 mt-3">
+                        <div class="input-group-prepend">
+                        </div>
+                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                    </div>
+                    <button type="submit" class="btn btn-outline-danger">Add Expense</button>
+                </form>
+            </div>
+            <div class="col-lg-6 col-12 p-4">
+                <div class="container">
+                    <div class="row text-center justify-content-center">
+                        <div class="col-sm-4">
+                            <h6>Expense Title</h6>
+                        </div>
+                        <div class="col-sm-4 col-12">
+                            <h6>Expense Value</h6>
+                        </div>
+                        <div class="col-sm-4 col-12">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+</body>
+</html>
