@@ -39,6 +39,7 @@ function expManupulation(){
     totalExpenses = sum(expAmount);
     balance=budget-totalExpenses;
     document.getElementById("balance").innerText=balance;
+    document.getElementById("expense").innerText=totalExpenses;
     if(balance<0){
         document.getElementById("bal-icon").style.color="#cc0000";
     }
