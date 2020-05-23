@@ -2,6 +2,11 @@ let budget=0, totalExpenses=0, balance=0;
 let expTitle=[];
 let expAmount=[];
 
+
+if(expTitle.length==0){
+    document.getElementById("table").style.visibility="hidden"
+}
+
 function budgetManupulation(){
     budget=document.getElementById("budget-data").value;
     document.getElementById("budget").innerText=budget; 
@@ -46,6 +51,30 @@ function expManupulation(){
     if(totalExpenses>0){
         document.getElementById("exp-icon").style.color="#cc0000";
     }
-    document.getElementById("expTitleData").value=""
-    document.getElementById("expAmountData").value=""
+    document.getElementById("expTitleData").value="";
+    document.getElementById("expAmountData").value="";
+    document.getElementById("table").style.visibility="visible"
+    appendChildlist(expTitleData, expAmountData);
+}
+
+
+
+// appending table of expense title and expense value
+
+function appendChildlist(expTitleData, expAmountData){
+    let tableRow=document.createElement("tr");
+    let tableHeading=document.createElement("th");
+    let headingText=document.createTextNode(expTitle.length);
+    tableHeading.appendChild(headingText);
+    let tableExpTitle=document.createElement("td");
+    let tableDataExpTitle=document.createTextNode(expTitleData);
+    tableExpTitle.appendChild(tableDataExpTitle);
+    let tableExpAmt=document.createElement("td");
+    let tableDataExpAmt=document.createTextNode(expAmountData);
+    tableExpAmt.appendChild(tableDataExpAmt);
+    tableRow.appendChild(tableHeading);
+    tableRow.appendChild(tableExpTitle);
+    tableRow.appendChild(tableExpAmt);
+    let bdy=document.getElementById("table-body");
+    bdy.appendChild(tableRow);
 }
