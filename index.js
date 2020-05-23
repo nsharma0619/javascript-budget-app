@@ -43,6 +43,9 @@ function expManupulation(){
     if(balance<0){
         document.getElementById("bal-icon").style.color="#cc0000";
     }
+    if(totalExpenses>0){
+        document.getElementById("exp-icon").style.color="#cc0000";
+    }
     document.getElementById("expTitleData").value=""
     document.getElementById("expAmountData").value=""
 }
