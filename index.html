@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/f0e1e7f5fd.js" crossorigin="anonymous"></script>
 </head>
-<body class="jumbotron justify-content-center">
+<body class="jumbotron justify-content-center" style="background-color: #e9ecef;">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -24,9 +24,9 @@
                         <div class="input-group-prepend">
                         <span class="input-group-text">$</span>
                         </div>
-                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <input id="budget-data" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                     </div>
-                    <button type="submit" class="btn btn-outline-success">Calculate</button>
+                    <button onclick="budgetManupulation()" type="button" class="btn btn-outline-success">Calculate</button>
                 </form>
             </div>
             <div class="col-lg-6 col-12 p-2">
@@ -35,17 +35,17 @@
                         <div class="col-sm-4 col-12">
                             <h3>BUDGET</h3>
                             <i class="far fa-money-bill-alt fa-5x" style="color:rgb(9, 114, 114);"></i><br>
-                            <p class="mt-4"> <i class="fas fa-dollar-sign fa-3x"></i> <span  style="font-size: xx-large;">0</span></p>
+                            <p class="mt-4"> <i id="bud-icon" style="color: #1f7a1f;" class="fas fa-dollar-sign fa-3x"></i> <span id="budget"  style="font-size: xx-large;">0</span></p>
                         </div>
                         <div class="col-sm-4 col-12">
                             <h3>EXPENSES</h3>
                             <i class="fas fa-credit-card fa-5x" style="color:rgb(9, 114, 114);"></i><br>
-                            <p class="mt-4"> <i class="fas fa-dollar-sign fa-3x"></i> <span  style="font-size: xx-large;">0</span></p>
+                            <p class="mt-4"> <i id="exp-icon" style="color: #1f7a1f;" class="fas fa-dollar-sign fa-3x"></i> <span  id="expense"  style="font-size: xx-large;">0</span></p>
                         </div>
                         <div class="col-sm-4 col-12">
                             <h3>BALANCE</h3>
                             <i class="fas fa-dollar-sign fa-5x" style="color:rgb(9, 114, 114);"></i><br>
-                            <p class="mt-4"> <i class="fas fa-dollar-sign fa-3x"></i> <span  style="font-size: xx-large;">0</span></p>
+                            <p class="mt-4"> <i id="bal-icon" style="color: #1f7a1f;" class="fas fa-dollar-sign fa-3x"></i> <span  id="balance"  style="font-size: xx-large;">0</span></p>
                         </div>
                     </div>
                 </div>
@@ -61,27 +61,27 @@
                     <div class="input-group mb-3 mt-3">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <input id="expTitleData" type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
                     </div>
                     <h3>Please Enter Expense Amount</h3>
                     <div class="input-group mb-3 mt-3">
                         <div class="input-group-prepend">
                         </div>
-                        <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                        <input id="expAmountData" type="number" class="form-control" aria-label="Amount (to the nearest dollar)">
                     </div>
-                    <button type="submit" class="btn btn-outline-danger">Add Expense</button>
+                    <button type="button" onclick="expManupulation()" class="btn btn-outline-danger">Add Expense</button>
                 </form>
             </div>
             <div class="col-lg-6 col-12 p-4">
                 <div class="container">
                     <div class="row text-center justify-content-center">
-                        <div class="col-sm-4">
+                        <div class="col-sm-5 col-12">
                             <h6>Expense Title</h6>
                         </div>
-                        <div class="col-sm-4 col-12">
+                        <div class="col-sm-5 col-12">
                             <h6>Expense Value</h6>
                         </div>
-                        <div class="col-sm-4 col-12">
+                        <div class="col-sm-2 col-12">
                             
                         </div>
                     </div>
@@ -95,5 +95,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>  
+    <script src="index.js"></script>
 </body>
 </html>
